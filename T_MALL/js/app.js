@@ -25,7 +25,6 @@ window.onload=function(){
 	var oLi=document.querySelectorAll('#specialShow ul li');
 	var oNav=document.querySelectorAll('nav')[0];
 	var oNavLi=oNav.querySelectorAll('ul li');
-	console.log(oNavLi);
 	var myT=myM=true;
 	var myL=myR=true;
 	var myP=myQ=true;
@@ -173,7 +172,6 @@ window.onload=function(){
 	})
 	addEvent(oMoney,'mouseover',function(e){
 		if(e.target.nodeName=='IMG'){
-			console.log(this.querySelectorAll('div')[0]);
 			this.querySelectorAll('div')[0].className='hover';
 		}
 	})
@@ -221,7 +219,7 @@ window.onload=function(){
 		this.querySelectorAll('div')[0].className=''
 	})
 	addEvent(oFunction,'mouseover',function(e){
-		if(e.target.nodeName=='IMG'){
+		if(e.target.src.indexOf('img/function.png')!=-1){
 			this.querySelectorAll('div')[0].className='hover';
 		}
 	})
@@ -240,19 +238,19 @@ window.onload=function(){
 	for(var i=0;i<oLi.length;i++){
 		addEvent(oLi[i],'mouseenter',function(e){
 				var oDiv = document.createElement('div');
-				oDiv.style.width='138px';
-				oDiv.style.height="107px";
+				oDiv.style.width='100%';
+				oDiv.style.height="100%";
 				oDiv.style.opacity=0.5;
 				oDiv.style.backgroundColor="#000";
 				oDiv.style.position='absolute';
 				oDiv.style.left='0';
 				oDiv.style.top='0';
 				var oEnter=document.createElement('div');
-				oEnter.style.width='80px';
-				oEnter.style.height='30px';
+				oEnter.style.width='40%';
+				oEnter.style.height='20%';
 				oEnter.style.position='absolute';
-				oEnter.style.top='40px';
-				oEnter.style.left='30px';
+				oEnter.style.top='40%';
+				oEnter.style.left='35%';
 				oEnter.innerHTML='欢迎进入';
 				oEnter.style.borderRadius='3px';
 				oEnter.style.backgroundColor='orange';
